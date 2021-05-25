@@ -1,5 +1,6 @@
 import React from 'react';
 //import { useNavigate } from 'react-router-dom';
+import Feed from './Feed/Feed';
 
 const Home = () => {
 
@@ -8,10 +9,9 @@ const Home = () => {
     //navigate('/login');
 
     return (
-        <div>
-          Home  
-          
-        </div>
+        <section className="container mainContainer">
+          <Feed />          
+        </section>
     )
 }
 
