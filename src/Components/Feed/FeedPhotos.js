@@ -8,9 +8,6 @@ import styles from './FeedPhotos.module.css';
 
 const FeedPhotos = ( { page, user, setModalPhoto, setInfinite } ) => {
 
-    //if ( ! page ) page = 1;
-    if ( ! user ) user = 0;
-
     const {data, loading, error, request} = useFetch();
 
     React.useEffect( () => {
