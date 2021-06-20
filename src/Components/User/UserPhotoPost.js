@@ -7,6 +7,7 @@ import Button from '../Forms/Button';
 import Error from '../Helpers/Error';
 import { PHOTO_POST } from '../../api';
 import { useNavigate } from 'react-router';
+import Head from '../Helpers/Head';
 
 const UserPhotoPost = () => {
 
@@ -46,6 +47,7 @@ const UserPhotoPost = () => {
 
     return (
         <section className={` ${styles.photoPost} animeLeft`} >
+            <Head title="Post" description="Upload your Wappu photo"/>
             <form onSubmit={handleSubmit}>
                 <Input label="Name" type="text" name="name" {...name} />
                 <Input label="Weight" type="number" name="weight" {...weight} />

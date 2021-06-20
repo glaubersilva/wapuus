@@ -6,6 +6,7 @@ import UserHeader from './UserHeader';
 import UserPhotoPost from './UserPhotoPost';
 import UserStats from './UserStats';
 import NotFound from '../NotFound';
+import Head from '../Helpers/Head';
 
 const User = () => {
 
@@ -13,6 +14,7 @@ const User = () => {
 
     return (
         <section className="container">
+            <Head title="My Account" description=""/>
            <UserHeader /> 
            <Routes>
                <Route path="/" element={<Feed user={data.id} />} />
