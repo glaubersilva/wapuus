@@ -5,6 +5,7 @@
     z-index: 100;
     background: white;
     top: 0px;
+    margin-left: 0.2rem;
 }
 
 .nav {
@@ -16,6 +17,15 @@
 
 .logo {
     padding: 0.5rem 0;
+    /*margin-top: 0.5rem;*/    
+    transform: scale(1.1);
+}
+
+.logoText {
+    margin: -1rem 0 0 -0.2rem;
+    font-weight: bold;
+    font-family: --type-second;
+    text-align: center;
 }
 
 .login {
@@ -29,7 +39,7 @@
     display: inline-block;
     width: 14px;
     height: 17px;
-    background: url('../Assets/usuario.svg') no-repeat center center;
+    background: url('../Assets/user.svg') no-repeat center center;
     margin-left: 00.5rem;
     position: relative;
     top: -1px;

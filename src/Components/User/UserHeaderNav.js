@@ -2,9 +2,9 @@ import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { UserContext } from '../../UserContext';
 import { ReactComponent as MyFeed } from '../../Assets/feed.svg';
-import { ReactComponent as MyStats } from '../../Assets/estatisticas.svg';
-import { ReactComponent as AddPhoto } from '../../Assets/adicionar.svg';
-import { ReactComponent as Exit } from '../../Assets/sair.svg';
+import { ReactComponent as MyStats } from '../../Assets/stats.svg';
+import { ReactComponent as AddPhoto } from '../../Assets/add.svg';
+import { ReactComponent as Exit } from '../../Assets/exit.svg';
 import styles from './UserHeaderNav.module.css';
 import useMedia from '../../Hooks/useMedia';
 

@@ -79,7 +79,7 @@ const LoginForm = () => {
             <Link className={styles.lost} to="/login/lost">Lost the Password?</Link>
             <div className={styles.create}>
                 <h2 className={styles.subtitle} >Register</h2>
-                <p>Ainda não possui conta? Cadastre-se no site.</p>
+                <p>Don't have an account yet? Register on the website.</p>
                 <Link className={stylesBtn.button} to="/login/create">New User</Link>
             </div>            
         </section>

@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from './Footer.module.css';
-import {ReactComponent as Logo} from '../Assets/dogs-footer.svg';
+//import {ReactComponent as Logo} from '../Assets/dogs-footer.svg';
+import {ReactComponent as Logo} from '../Assets/wapuu-footer-logo.svg';
 
 const Footer = () => {
     return (
         <footer className={styles.footer} >
-            <Logo />
-            <p>Wapuus - Some Rights Reserved</p>
+            <Logo /><p className={styles.logoFooterText} >WAPUUS</p>
+            <p>Some Rights Reserved</p>
         </footer>
     )
 }
