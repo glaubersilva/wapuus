@@ -12,6 +12,12 @@ import Head from '../Helpers/Head';
 const UserPhotoPost = () => {
 
     const name = useForm();
+
+    const from = useForm();
+    const from_url = useForm();    
+    //const caption = useForm();
+    const [caption, setCaption] = React.useState('');
+    
     const weight = useForm('number');
     const age = useForm('number');
     const [img, setImg] = React.useState({});
@@ -32,6 +38,9 @@ const UserPhotoPost = () => {
         formData.append('name', name.value );
         formData.append('weight', weight.value );
         formData.append('age', age.value );
+        formData.append('from', from.value );
+        formData.append('from_url', from_url.value );
+        formData.append('caption', caption );
 
         const token = window.localStorage.getItem('token');
         const { url, options } = PHOTO_POST(formData, token);
@@ -45,14 +54,28 @@ const UserPhotoPost = () => {
         });
     }
 
+    /**
+     * <Input label="Weight" type="number" name="weight" {...weight} />
+       <Input label="Age" type="number" name="age" {...age} />
+     */
+
     return (
         <section className={` ${styles.photoPost} animeLeft`} >
-            <Head title="Post" description="Upload your Wappu photo"/>
-            <form onSubmit={handleSubmit}>
-                <Input label="Name" type="text" name="name" {...name} />
-                <Input label="Weight" type="number" name="weight" {...weight} />
-                <Input label="Age" type="number" name="age" {...age} />
-                <Input className={styles.file} type="file" name="img" id="img" onChange={handleImgChange} />                                
+            <Head title="Posts" description="Upload your Wappu photo"/>
+            <form onSubmit={handleSubmit}>                
+                <Input label="* Image:" className={styles.file} type="file" name="img" id="img" onChange={handleImgChange} />
+                <Input label="* Name:" type="text" name="name" {...name} />                
+                <Input label="From" type="text" name="from" {...from} />
+                <Input label="From URL" type="text" name="from-url" {...from_url} />                
+                <textarea 
+                    className={styles.textarea}
+                    id="caption"
+                    name="caption"
+                    rows="3"
+                    placeholder="Write a Caption here..."
+                    value={caption}
+                    onChange={ ({target}) => setCaption(target.value) }
+                />
                 {loading ? <Button disabled>Uploading...</Button> : <Button>Publish</Button>}    
                 <Error />
             </form>

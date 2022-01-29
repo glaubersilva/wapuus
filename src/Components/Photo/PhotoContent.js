@@ -24,13 +24,15 @@ const PhotoContent = ( {data, single} ) => {
                     <h1 className="title">
                         <Link to={`/photo/${photo.id}`}>{photo.title}</Link> 
                     </h1>
-                    <ul className={styles.attributes}>
-                        <li>{photo.weight} kg</li>
-                        <li>{photo.age} years</li>
+                    <ul className={styles.attributes}>                        
+                        <li><a target="_blank" rel="noreferrer" href={photo.from_url}>From: {photo.from}</a></li>
                     </ul>
-                </div>
+                    <div className={styles.caption} >
+                        <p>{photo.caption}</p>
+                    </div>
+                </div>                
             </div>
-            <PhotoComments single={single} id={photo.id} comments={comments} />
+            <PhotoComments single={single} id={photo.id} comments={comments} caption={photo.caption} />
         </div>
     )
 }
