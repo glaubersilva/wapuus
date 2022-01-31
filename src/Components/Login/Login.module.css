@@ -8,7 +8,7 @@
 .login::before {
     display: block;
     content: '';
-    background: url('../../Assets/login.png') no-repeat center center;
+    background: url('../../Assets/login-bg.png') no-repeat center center;
     background-size: cover;
 }
 
