@@ -15,6 +15,12 @@
     margin-bottom: 1rem;
 }
 
+.label {
+    display: block;
+    font-size: 1rem;
+    line-height: 1;
+    padding-bottom: 0.5rem;
+}
 .textarea {
     display: block;
     width: 100%;    

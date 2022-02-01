@@ -62,17 +62,19 @@ const UserPhotoPost = () => {
     return (
         <section className={` ${styles.photoPost} animeLeft`} >
             <Head title="Posts" description="Upload your Wappu photo"/>
-            <form onSubmit={handleSubmit}>                
-                <Input label="* Image:" className={styles.file} type="file" name="img" id="img" onChange={handleImgChange} />
-                <Input label="* Name:" type="text" name="name" {...name} />                
-                <Input label="From" type="text" name="from" {...from} />
-                <Input label="From URL" type="text" name="from-url" {...from_url} />                
+            <form onSubmit={handleSubmit}>                            
+                <Input label="Image:" className={styles.file} type="file" name="img" id="img" onChange={handleImgChange} accept="image/png, image/jpeg" required />
+                <Input label="Name:" placeholder="The Original" type="text" name="name" {...name} required />                
+                <Input label="From:" placeholder="WordPress Japan" name="from" {...from} />
+                <Input label="From URL:" placeholder="https://ja.wordpress.org/" type="text" name="from-url" {...from_url} />      
+                <label htmlFor="caption" className={styles.label} >Caption:</label>          
                 <textarea 
                     className={styles.textarea}
                     id="caption"
                     name="caption"
                     rows="3"
-                    placeholder="Write a Caption here..."
+                    maxLength ="150"
+                    placeholder="Write a caption maximum of 150 characters..."
                     value={caption}
                     onChange={ ({target}) => setCaption(target.value) }
                 />
