@@ -26,19 +26,19 @@ const UserHeaderNav = () => {
             <nav className={ `${ mobile ? styles.navMobile : styles.nav } ${ mobileMenu && styles.navMobileActive }` } >
                 <NavLink to="/account" end activeClassName={styles.active}>
                     <MyFeed />
-                    { mobile && 'Minhas Fotos' }
-                </NavLink>
-                <NavLink to="/account/stats" activeClassName={styles.active}>
-                    <MyStats />
-                    { mobile && 'Estatísticas' }
+                    { mobile && 'My Wapuus' }
                 </NavLink>
                 <NavLink to="/account/post" activeClassName={styles.active}>
                     <AddPhoto />
-                    { mobile && 'Adicionar Foto' }
+                    { mobile && 'Post Wapuu' }
                 </NavLink>
+                <NavLink to="/account/stats" activeClassName={styles.active}>
+                    <MyStats />
+                    { mobile && 'Stats' }
+                </NavLink>                
                 <button onClick={userLogout} >
                     <Exit />
-                    { mobile && 'Sair' }
+                    { mobile && 'Exit' }
                 </button>
             </nav>
         </>

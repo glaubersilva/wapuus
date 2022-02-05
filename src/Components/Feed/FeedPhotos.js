@@ -5,6 +5,7 @@ import { PHOTOS_GET } from '../../api';
 import Error from '../Helpers/Error';
 import Loading from '../Helpers/Loading';
 import styles from './FeedPhotos.module.css';
+import { Link } from 'react-router-dom';
 
 const FeedPhotos = ( { page, user, setModalPhoto, setInfinite } ) => {
 
@@ -27,19 +28,41 @@ const FeedPhotos = ( { page, user, setModalPhoto, setInfinite } ) => {
     if (error) return <Error message={error}/>;
     if (loading) return <Loading />;
     if (data) {
-        return (
-            <ul className={`${styles.feed} animeLeft`}>
-                { data.map( photo =>  (
-                    <FeedPhotosItem 
-                        key={photo.id} 
-                        photo={photo} 
-                        setModalPhoto={setModalPhoto}
-                    /> 
-                ) ) }                
-            </ul>
-        )
-    } else {
-        return null;
+        if ( user && data.length === 0 ) {
+
+            return ( 
+                <div 
+                    style={{
+                        textAlign: 'center',
+                        padding: '2rem 0 4rem 0',
+                        color: '#888',
+                    }}
+                >
+                    <p>
+                        You have not added any Wappu yet...                        
+                    </p>                    
+                    <p>
+                        <Link className={styles.new} to="/account/post">Post your first Wapuu</Link>
+                    </p>
+                </div>
+            )
+
+        } else {
+        
+            return (
+                <ul className={`${styles.feed} animeLeft`}>
+                    { data.map( photo =>  (
+                        <FeedPhotosItem 
+                            key={photo.id} 
+                            photo={photo} 
+                            setModalPhoto={setModalPhoto}
+                        /> 
+                    ) ) }                
+                </ul>
+            )
+        }
+    } else {        
+        return 'null';
     }
 }
 

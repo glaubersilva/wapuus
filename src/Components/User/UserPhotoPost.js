@@ -14,12 +14,12 @@ const UserPhotoPost = () => {
     const name = useForm();
 
     const from = useForm();
-    const from_url = useForm();    
-    //const caption = useForm();
-    const [caption, setCaption] = React.useState('');
+    const from_url = useForm();        
+    const [caption, setCaption] = React.useState(''); //const caption = useForm();
     
     const weight = useForm('number');
     const age = useForm('number');
+    
     const [img, setImg] = React.useState({});
     const {data, error, loading, request} = useFetch();
     const navigate = useNavigate();
@@ -63,7 +63,7 @@ const UserPhotoPost = () => {
         <section className={` ${styles.photoPost} animeLeft`} >
             <Head title="Posts" description="Upload your Wappu photo"/>
             <form onSubmit={handleSubmit}>                            
-                <Input label="Image:" className={styles.file} type="file" name="img" id="img" onChange={handleImgChange} accept="image/png, image/jpeg" required />
+                <Input label="Image - should have at least 1000 X 1000 pixels and can't be greater than 5MB:" className={styles.file} type="file" name="img" id="img" onChange={handleImgChange} accept="image/png, image/jpeg" required />                
                 <Input label="Name:" placeholder="The Original" type="text" name="name" {...name} required />                
                 <Input label="From:" placeholder="WordPress Japan" name="from" {...from} />
                 <Input label="From URL:" placeholder="https://ja.wordpress.org/" type="text" name="from-url" {...from_url} />      
@@ -79,7 +79,7 @@ const UserPhotoPost = () => {
                     onChange={ ({target}) => setCaption(target.value) }
                 />
                 {loading ? <Button disabled>Uploading...</Button> : <Button>Publish</Button>}    
-                <Error />
+                <Error message={error}/>
             </form>
             <div>
             {img.preview && <div className={styles.preview} style={ {backgroundImage: `url( '${img.preview}' )` } }></div>}

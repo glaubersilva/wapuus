@@ -11,3 +11,18 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.new {
+    display: inline-block;
+    color: #666;
+    padding: 0.5rem 0;
+    line-height: 1;
+}
+
+.new::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: currentColor;
+    display: block;
+}

@@ -16,10 +16,13 @@ const useFetch = () => {
             response = await fetch( url, options );
             console.log(response);
             json = await response.json();
-            if (response.ok === false) throw new Error(json.message);
-        } catch (exception) {
+            if (response.ok === false) {                
+                throw new Error( json.message );                
+            }    
+        } catch ( exception ) {
             json = null;
-            setError(exception.message);
+            //console.log( 'exception.message: ', exception.message );
+            setError( exception.message );
         } finally {
             setData(json);
             setLoading(false);
