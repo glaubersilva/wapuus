@@ -25,7 +25,7 @@ const PhotoContent = ( {data, single} ) => {
                         <Link to={`/photo/${photo.id}`}>{photo.title}</Link> 
                     </h1>
                     <ul className={styles.attributes}>                        
-                        <li><a target="_blank" rel="noreferrer" href={photo.from_url}>From: {photo.from}</a></li>
+                        <li>From: <a target="_blank" rel="noreferrer" href={photo.from_url}>{photo.from}</a></li>
                     </ul>
                     <div className={styles.caption} >
                         <p>{photo.caption}</p>

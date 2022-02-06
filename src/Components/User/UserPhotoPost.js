@@ -63,7 +63,7 @@ const UserPhotoPost = () => {
         <section className={` ${styles.photoPost} animeLeft`} >
             <Head title="Posts" description="Upload your Wappu photo"/>
             <form onSubmit={handleSubmit}>                            
-                <Input label="Image - should have at least 1000 X 1000 pixels and can't be greater than 5MB:" className={styles.file} type="file" name="img" id="img" onChange={handleImgChange} accept="image/png, image/jpeg" required />                
+                <Input label="Image - should be a JPG or PNG file with at least 1000 X 1000 pixels and can't be greater than 5MB:" className={styles.file} type="file" name="img" id="img" onChange={handleImgChange} accept="image/png, image/jpeg" required />                
                 <Input label="Name:" placeholder="The Original" type="text" name="name" {...name} required />                
                 <Input label="From:" placeholder="WordPress Japan" name="from" {...from} />
                 <Input label="From URL:" placeholder="https://ja.wordpress.org/" type="text" name="from-url" {...from_url} />      

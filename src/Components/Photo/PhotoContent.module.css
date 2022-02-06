@@ -48,6 +48,7 @@
         max-height: calc(100vh - 4rem);
         overflow-y: auto;
         grid-template-columns: minmax(20rem, 40rem);
+        grid-template-rows: auto;
     }
     .img {
         grid-row: 1;
@@ -80,7 +81,7 @@
     font-size: 1.125rem;
     font-weight: bold;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    /*margin-bottom: 0.3rem;*/
 }
 
 .attributes li {
@@ -99,12 +100,29 @@
     margin-top: 5px;
 }
 
-.caption {    
-    margin-bottom: 2rem;
-    background-color: #eee;    
+.attributes a {
+    display: inline-block;
+    color: #666;
+    padding: 0.5rem 0;
+    line-height: 1;
+}
+
+.attributes a::after {
+    content: '';
+    height: 2px;
     width: 100%;
+    background: currentColor;
+    display: block;
+}
+
+.caption {    
+    margin-bottom: 1rem;    
+    width: 100%;
+    color: #666;
+    font-style: italic;
+    border-bottom: solid 2px #eee;
 }
 
 .caption p {
-    padding: 0.6rem;
+    padding: 0.5rem;
 }

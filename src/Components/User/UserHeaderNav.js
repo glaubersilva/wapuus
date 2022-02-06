@@ -27,14 +27,14 @@ const UserHeaderNav = () => {
                 <NavLink to="/account" end activeClassName={styles.active}>
                     <MyFeed />
                     { mobile && 'My Wapuus' }
+                </NavLink>                
+                <NavLink to="/account/stats" activeClassName={styles.active}>
+                    <MyStats />
+                    { mobile && 'Stats' }
                 </NavLink>
                 <NavLink to="/account/post" activeClassName={styles.active}>
                     <AddPhoto />
                     { mobile && 'Post Wapuu' }
-                </NavLink>
-                <NavLink to="/account/stats" activeClassName={styles.active}>
-                    <MyStats />
-                    { mobile && 'Stats' }
                 </NavLink>                
                 <button onClick={userLogout} >
                     <Exit />
