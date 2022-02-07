@@ -13,8 +13,8 @@ const UserPhotoPost = () => {
 
     const name = useForm();
 
-    const from = useForm();
-    const from_url = useForm();        
+    const from = useForm(false);
+    const from_url = useForm(false);        
     const [caption, setCaption] = React.useState(''); //const caption = useForm();
     
     const weight = useForm('number');
