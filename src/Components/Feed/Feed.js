@@ -46,7 +46,7 @@ const Feed = ({ user }) => {
           setInfinite={setInfinite}
         />
       ))}
-      {!infinite && !user && (
+      {!infinite /*&& !user*/ && (
         <p
           style={{
             textAlign: 'center',

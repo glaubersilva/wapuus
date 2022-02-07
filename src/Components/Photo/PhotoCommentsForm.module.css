@@ -58,6 +58,23 @@
     animation: latir .6s infinite;
 }
 
+.buttonDisabled {
+    border: none;
+    cursor: default;
+    color: #333;
+    background: transparent;
+    font-size: 1rem;
+    padding: 0 1rem;
+    overflow: hidden;    
+    transform: scale(1.4);
+    margin: -2px 0 0 10px;
+}
+
+.buttonDisabled svg path,
+.buttonDisabled svg path {
+    fill: #666;    
+} 
+
 @keyframes latir {
     from {
         opacity: 0;

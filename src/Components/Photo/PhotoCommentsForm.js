@@ -9,13 +9,16 @@ import styles from './PhotoCommentsForm.module.css';
 const PhotoCommentsForm = ( { id, setComments, single } ) => {    
     
     const [comment, setComment] = React.useState('');
+    const [loading, setLoading] = React.useState(false);
     const {request, error} = useFetch();
 
     async function handleSubmit( event ) { 
         event.preventDefault();
-        const {url, options} = COMMENT_POST(id, {comment});
+        setLoading(true);
+        const {url, options} = COMMENT_POST(id, {comment});                
         const {response, json} = await request(url, options);
         if (response.ok) {
+            setLoading(false);
             setComment('');
             setComments( (comments) => [...comments, json] );
         }
@@ -31,9 +34,7 @@ const PhotoCommentsForm = ( { id, setComments, single } ) => {
                 value={comment} 
                 onChange={ ({target}) => setComment(target.value) } 
             />
-            <button className={styles.button} >
-                <Send />
-            </button>
+            {loading ? <button className={styles.buttonDisabled} disabled><Send /></button> : <button className={styles.button}><Send /></button>}            
             <Error message={error} />
         </form>
     )
