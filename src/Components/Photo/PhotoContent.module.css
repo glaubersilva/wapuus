@@ -100,21 +100,6 @@
     margin-top: 5px;
 }
 
-.attributes a {
-    display: inline-block;
-    color: #666;
-    padding: 0.5rem 0;
-    line-height: 1;
-}
-
-.attributes a::after {
-    content: '';
-    height: 2px;
-    width: 100%;
-    background: currentColor;
-    display: block;
-}
-
 .caption {    
     margin-bottom: 1rem;    
     width: 100%;

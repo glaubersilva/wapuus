@@ -15,10 +15,7 @@ const UserPhotoPost = () => {
 
     const from = useForm(false);
     const from_url = useForm(false);        
-    const [caption, setCaption] = React.useState(''); //const caption = useForm();
-    
-    const weight = useForm('number');
-    const age = useForm('number');
+    const [caption, setCaption] = React.useState('');    
     
     const [img, setImg] = React.useState({});
     const {data, error, loading, request} = useFetch();
@@ -35,9 +32,7 @@ const UserPhotoPost = () => {
         const formData = new FormData();
 
         formData.append('img', img.raw );
-        formData.append('name', name.value );
-        formData.append('weight', weight.value );
-        formData.append('age', age.value );
+        formData.append('name', name.value );                
         formData.append('from', from.value );
         formData.append('from_url', from_url.value );
         formData.append('caption', caption );
@@ -52,12 +47,7 @@ const UserPhotoPost = () => {
             preview: URL.createObjectURL( target.files[0] ),
             raw: target.files[0],
         });
-    }
-
-    /**
-     * <Input label="Weight" type="number" name="weight" {...weight} />
-       <Input label="Age" type="number" name="age" {...age} />
-     */
+    }    
 
     return (
         <section className={` ${styles.photoPost} animeLeft`} >

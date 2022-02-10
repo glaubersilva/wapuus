@@ -5,7 +5,6 @@ import { STATS_GET } from '../../api';
 import Loading from '../Helpers/Loading';
 import Error from '../Helpers/Error';
 import { Link } from 'react-router-dom';
-import styles from './UserStats.module.css';
 //import UserStatsGraphs from './UserStatsGraphs';
 const UserStatsGraphs = React.lazy( () => import('./UserStatsGraphs'));
 
@@ -24,7 +23,7 @@ const UserStats = () => {
   if (error) return <Error message={error} />;
   if (data)
 
-    if ( data.length === 0 ) {
+    if ( ! loading && data.length === 0 ) {
 
       return ( 
           <div 
@@ -38,7 +37,7 @@ const UserStats = () => {
                   You have not added any Wappu yet...                        
               </p>                    
               <p>
-                  <Link className={styles.new} to="/account/post">Post your first Wapuu</Link>
+                  <Link className="link" to="/account/post">Post your first Wapuu</Link>
               </p>
           </div>
       )

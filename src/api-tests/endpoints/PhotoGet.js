@@ -9,7 +9,7 @@ const PhotoGet = () => {
     function handleSubmit( event ) {
         event.preventDefault();
 
-        fetch(`https://wapuus-api.local/json/gs-wapuus-api/v1/photo/${id}`
+        fetch(`https://wapuus-api.local/json/wapuus-api/v1/photo/${id}`
         ).then( (response) =>{
             console.log( response );
             return response.json();

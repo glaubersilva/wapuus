@@ -2,6 +2,7 @@ import React from 'react';
 import FeedModal from './FeedModal';
 import FeedPhotos from './FeedPhotos';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Feed = ({ user }) => {
   const [modalPhoto, setModalPhoto] = React.useState(null);
@@ -30,7 +31,7 @@ const Feed = ({ user }) => {
       window.removeEventListener('wheel', infiniteScroll);
       window.removeEventListener('scroll', infiniteScroll);
     };
-  }, [infinite]);
+  }, [infinite]);  
 
   return (
     <div>
@@ -45,8 +46,36 @@ const Feed = ({ user }) => {
           setModalPhoto={setModalPhoto}
           setInfinite={setInfinite}
         />
-      ))}
-      {!infinite /*&& !user*/ && (
+      ))}      
+      {console.log('user: ', user )}
+      {!infinite && user > 0 && document.querySelectorAll('#root img').length === 0 && (
+        <div 
+          style={{
+              textAlign: 'center',
+              padding: '2rem 0 4rem 0',
+              color: '#888',
+          }}
+        >
+          <p>
+            You have not added any Wappu yet...                        
+          </p>                    
+          <p>
+            <Link className="link" to="/account/post">Post your first Wapuu</Link>
+          </p>
+        </div>
+      )}
+      {!infinite && isNaN( user ) && document.querySelectorAll('#root img').length === 0 && (
+        <p
+        style={{
+          textAlign: 'center',
+          padding: '2rem 0 4rem 0',
+          color: '#888',
+        }}
+        >
+          This user does have not added any Wappu yet.
+        </p>
+      )}           
+      {!infinite && document.querySelectorAll('#root img').length > 0 && (
         <p
           style={{
             textAlign: 'center',

@@ -56,6 +56,7 @@ a {
     font-size: 3rem;
     margin: 1rem 0;
     position: relative;
+    text-transform: capitalize;
 }
 
 .title::after {
@@ -96,4 +97,19 @@ a {
 
 .VictoryContainer {
     height: initial !important;
+}
+
+.link {
+    display: inline-block;
+    color: #666;
+    padding: 0.5rem 0;
+    line-height: 1;
+}
+
+.link::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: currentColor;
+    display: block;
 }

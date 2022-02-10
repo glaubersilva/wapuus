@@ -3,9 +3,7 @@ import React from 'react'
 const PhotoPost = () => {
 
     const [token, setToken] = React.useState('');
-    const [name, setName] = React.useState('');
-    const [weight, setWeight] = React.useState('');
-    const [age, setAge] = React.useState('');
+    const [name, setName] = React.useState('');    
     const [img, setImg] = React.useState('');
 
     // eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvd2FwdXVzLWFwaS5sb2NhbCIsImlhdCI6MTYyMDQ3OTgyNywibmJmIjoxNjIwNDc5ODI3LCJleHAiOjE2MjkxMTk4MjcsImRhdGEiOnsidXNlciI6eyJpZCI6IjQifX19.FT4RclPTC-UuFd5sDFWd0GP8syXG6fOeDLqNDBhMaXg
@@ -15,19 +13,15 @@ const PhotoPost = () => {
 
         console.log({
             token,
-            name,
-            weight,
-            age,
+            name,            
             img
         });
 
         const formData = new FormData();
-        formData.append( 'name', name );
-        formData.append( 'weight', weight );
-        formData.append( 'age', age );
+        formData.append( 'name', name );                
         formData.append( 'img', img );
 
-        fetch('https://wapuus-api.local/json/gs-wapuus-api/v1/photo', {
+        fetch('https://wapuus-api.local/json/wapuus-api/v1/photo', {
             method: 'POST',
             headers: {
                 Authorization: 'Bearer ' + token
@@ -55,19 +49,7 @@ const PhotoPost = () => {
                 placeholder="name"
                 value={name}
                 onChange={ ({target}) => setName(target.value) }
-            />
-            <input
-                type="text"
-                placeholder="weight"
-                value={weight}
-                onChange={ ({target}) => setWeight(target.value) }
-            />
-            <input
-                type="text"
-                placeholder="age"
-                value={age}
-                onChange={ ({target}) => setAge(target.value) }
-            />
+            />    
             <input
                 type="file"                
                 onChange={ ({target}) => setImg(target.files[0]) }

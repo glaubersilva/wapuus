@@ -15,7 +15,7 @@ const UserPost = () => {
             password
         });
 
-        fetch('https://wapuus-api.local/json/gs-wapuus-api/v1/user', {
+        fetch('https://wapuus-api.local/json/wapuus-api/v1/user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
