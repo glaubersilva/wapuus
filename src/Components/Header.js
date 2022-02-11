@@ -15,6 +15,9 @@ const Header = () => {
                 <Link className={styles.logo} to="/" aria-label="Wapuus - Home">
                     <Logo /><p className={styles.logoText} >WAPUUS</p>
                 </Link>
+                <Link className={styles.about} to="/about">
+                    About
+                </Link>
                 { data ? (
                     <div>
                         <Link className={styles.login} to="/account">                    

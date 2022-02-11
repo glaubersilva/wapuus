@@ -28,10 +28,32 @@
     text-align: center;
 }
 
-.login {
+.about {
     color: #333;
     display: flex;
+    flex: 1;
+    flex-direction: row-reverse;
     align-items: center;
+}
+
+.about::before {
+    content: '';
+    display: inline-block;
+    height: 15px;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    position: relative;
+    top: -3px;
+    width: 2px;
+    background: #333;
+    margin-top: 5px;
+}
+
+.login {
+    color: #333;
+    display: flex;    
+    align-items: center;
+    text-transform: capitalize;
 }
 
 .login::after {

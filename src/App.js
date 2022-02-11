@@ -7,6 +7,7 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import ProtectedRoute from './Components/Helpers/ProtectedRoute';
 import Home from './Components/Home';
+import About from './Components/About';
 import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound';
 import Photo from './Components/Photo/Photo';
@@ -23,6 +24,7 @@ function App() {
           <main className="AppBody">
             <Routes >
               <Route path="/" element={ <Home /> } />
+              <Route path="/about/*" element={ <About /> } />
               <Route path="/login/*" element={ <Login /> } />
               <ProtectedRoute path="/account/*" element={ <User /> } />
               <Route path="/photo/:id" element={ <Photo /> } />
