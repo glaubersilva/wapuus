@@ -4,8 +4,8 @@ import styles from './About.module.css';
 
 const About = () => {
     return (
-        <section className="container" >
-            <h1 class="title">About</h1>
+        <section className="container" >            
+            <h1 className="title">About</h1>
             <p>This web app is <i>"A place to share Wapuus"</i> where anyone can create their own account and start sharing.</p><br/>
             <h2>But what is a Wapuu after all?</h2><br/>
             <p>The Wapuu character was created to be the official mascot of the Japanese WordPress community, but these days it's considered the official mascot of the global WordPress community as well.</p><br/>
