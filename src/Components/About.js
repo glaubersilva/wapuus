@@ -15,9 +15,9 @@ const About = () => {
             <h2>Under the hood</h2><br/>
             <p>Created by <a className="link" target="_blank" rel="noreferrer" href="https://glaubersilva.me">Glauber Silva</a>, this project beyond serving to be <i>"A place to share Wapus"</i> it's also a place to study/acquire more developer skills in a practical and funny way.</p><br/>
             <p>The project is split into two parts...</p><br/>
-            <p><b>#1</b> - Firstly, we have <a className="link" target="_blank" rel="noreferrer" href="https://github.com/glaubersilva/wapuus">the frontend (available on GitHub)</a> that is totally decoupled from WordPress that was built with HTML, CSS, Javascript, and the React library;</p><br/>
+            <p><b>#1</b> - Firstly, we have <a className="link" target="_blank" rel="noreferrer" href="https://github.com/glaubersilva/wapuus">the frontend (available on GitHub)</a> where you are reading this text right now, this is totally decoupled from WordPress and built with HTML, CSS, Javascript, and the ReactJS library;</p><br/>
             <p><b>#2</b> - Secondly, we have <a className="link" target="_blank" rel="noreferrer" href="https://github.com/glaubersilva/wapuus-api">the backend (available on GitHub)</a> which is a WordPress plugin, so is built with PHP, that extends the WordPress REST API and exposes the endpoints used by part #1 of this project.</p><br/>
-            <p>With these two parts, we have as the final result the implementation of a headless WordPress/CMS which is one setup that uses WordPress on the backend for managing content and some other custom frontend stack to actually display that content to a site visitor.</p><br/>
+            <p>With these two parts, we have as the final result the implementation of a headless WordPress/CMS which is a kind of setup that uses WordPress on the backend for managing content and some other custom frontend stack to actually display that content to a site visitor.</p><br/>
             <h2>Want to talk to us?</h2><br/>
             <p>Just send an email to: <a className="link" href="mailto:info@wapuus.org">info@wapuus.org</a></p><br/><br/><br/>
         </section>
