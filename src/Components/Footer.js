@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className={styles.footer} >
             <Logo /><p className={styles.logoFooterText} >WAPUUS</p>
             <p>A place to share Wapuus</p>        
-            <p className={styles.links}><a href="mailto:info@wapuus.org">Contact</a>  |  <Link to="/about">About</Link> </p>
+            <p className={styles.links}><a href="mailto:info@wapuus.org">contact</a>  |  <Link to="/about">about</Link> </p>
         </footer>
     )
 }

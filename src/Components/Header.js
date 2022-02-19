@@ -16,7 +16,7 @@ const Header = () => {
                     <Logo /><p className={styles.logoText} >WAPUUS</p>
                 </Link>
                 <Link className={styles.about} to="/about">
-                    About
+                    about
                 </Link>
                 { data ? (
                     <div>
@@ -27,7 +27,7 @@ const Header = () => {
                     </div>
                 ) : (
                     <Link className={styles.login} to="/login">                    
-                        Login
+                        login
                     </Link>
                 )}                
             </nav>

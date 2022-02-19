@@ -10,6 +10,10 @@
     margin-top: 1rem;
 }
 
+.footer a {
+    color: #764701;
+}
+
 .links {    
     font-size: 0.8rem;    
     text-decoration: underline;
