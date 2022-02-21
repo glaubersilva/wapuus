@@ -15,6 +15,7 @@ import Photo from './Components/Photo/Photo';
 import User from './Components/User/User';
 import UserProfile from './Components/User/UserProfile';
 import { UserStorage } from './UserContext';
+import { API_LOCALHOST } from './api';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <ScrollToTop />                                 
         <UserStorage>
           <Header />          
-          <main className="AppBody">                    
+          <main className={API_LOCALHOST ? "AppBodyApiLocalhost" : "AppBody"}>                    
             <Routes >              
               <Route path="/" element={ <Home /> } />
               <Route path="/about/*" element={ <About /> } />

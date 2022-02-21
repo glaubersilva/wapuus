@@ -1,4 +1,5 @@
-export const API_URL = 'https://wapuus-api.local/json';
+export const API_LOCALHOST = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") ? true : false;
+export const API_URL = API_LOCALHOST ? 'https://wapuus-api.local/json' : 'https://api.wapuus.org/json';
 
 export function TOKEN_POST ( body ) {
     return {

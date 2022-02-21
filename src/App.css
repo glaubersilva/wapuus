@@ -95,6 +95,12 @@ a {
     flex: 1;
 }
 
+.AppBodyApiLocalhost {
+    flex: 1; 
+    background-color: rgb(247, 214, 214);
+    z-index: 0;
+}
+
 .VictoryContainer {
     height: initial !important;
 }
