@@ -23,11 +23,13 @@ const LoginCreate = () => {
             username: username.value,
             email: email.value,
             password: password.value,
+            url: window.location.href.replace('create', 'reset'),
         });
         const {response} = await request(url, options);
         console.log('response: ',  response);
         if (response.ok) {
-            userLogin( username.value, password.value );        
+            //userLogin( username.value, password.value );            
+            alert("We just sent you an e-mail with a password creation link.");            
         }
     }
 
@@ -38,7 +40,7 @@ const LoginCreate = () => {
             <form onSubmit={handleSubmit}>
                 <Input label="User" type="text" name="username" {...username} />
                 <Input label="Email" type="email" name="email" {...email} />
-                <Input label="Password" type="password" name="password" {...password} />
+                {/*<Input label="Password" type="password" name="password" {...password} />*/}
                 {loading ? (
                     <Button disabled>Registering...</Button> 
                 ) : (
