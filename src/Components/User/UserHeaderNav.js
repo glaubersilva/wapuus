@@ -26,7 +26,7 @@ const UserHeaderNav = () => {
             <nav className={ `${ mobile ? styles.navMobile : styles.nav } ${ mobileMenu && styles.navMobileActive }` } >
                 <NavLink to="/account" end activeClassName={styles.active}>
                     <MyFeed />
-                    { mobile && 'My Wapuus' }
+                    { mobile && 'My Account' }
                 </NavLink>                
                 <NavLink to="/account/stats" activeClassName={styles.active}>
                     <MyStats />

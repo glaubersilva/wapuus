@@ -18,7 +18,7 @@ const UserHeader = () => {
             setTitle( 'Stats' );
             break;
             default: 
-            setTitle( 'My Wapuus' );
+            setTitle( 'My Account' );
         }        
 
     }, [location]);

@@ -78,7 +78,7 @@
 
 .attributes {
     display: flex;
-    font-size: 1.125rem;
+    font-size: 0.7rem;
     font-weight: bold;
     margin-top: 1rem;
     /*margin-bottom: 0.3rem;*/
@@ -91,10 +91,10 @@
 .attributes li::before {
     content: '';
     display: inline-block;
-    height: 20px;
+    height: 10px;
     margin-right: .5rem;
     position: relative;
-    top: 3px;
+    top: 1px;
     width: 2px;
     background: #333;
     margin-top: 5px;

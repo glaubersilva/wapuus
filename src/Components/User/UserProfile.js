@@ -9,7 +9,7 @@ const UserProfile = () => {
 
     return (
         <section className="container mainSection">
-            <Head title={user} description="My Wappus Space"/>
+            <Head title={user} description="My Account"/>
             <h1 className="title">{user}</h1>
             <Feed user={user} />
         </section>
