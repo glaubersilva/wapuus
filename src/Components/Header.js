@@ -21,7 +21,7 @@ const Header = () => {
                 { data ? (
                     <div>
                         <Link className={styles.login} to="/account">                    
-                            { data.name }
+                            { data.username }
                             
                         </Link>                        
                     </div>
