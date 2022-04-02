@@ -18,10 +18,10 @@ const PhotoComments = ( props ) => {
     return (
         <>            
             <ul ref={commentsSection} className={`${styles.comments} ${props.single ? styles.single : ''}`}>
-                {comments.map( comment => <li key={comment.comment_ID}>
-                   <b>{comment.comment_author}: </b>             
-                   <span> {comment.comment_content} </span>
-                   { user.data && user.data.username === comment.comment_author ? <PhotoCommentDelete id={comment.comment_ID} /> : '' }
+                {comments.map( comment => <li key={comment.id}>
+                   <b>{comment.author}: </b>             
+                   <span> {comment.comment} </span>
+                   { user.data && user.data.username === comment.author ? <PhotoCommentDelete id={comment.id} /> : '' }
                 </li>)}
             </ul>
             { login && <PhotoCommentsForm single={props.single} id={props.id} setComments={setComments} /> }
