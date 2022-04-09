@@ -28,7 +28,7 @@ export function TOKEN_VALIDATE_POST ( token ) {
 
 export function USER_GET ( token ) {
     return {
-        url: API_URL + '/wapuus-api/v1/users',
+        url: API_URL + '/wapuus-api/v2/users',
         options: {
             method: 'GET',
             headers: {
@@ -40,7 +40,7 @@ export function USER_GET ( token ) {
 
 export function USER_POST ( body ) {
     return {
-        url: API_URL + '/wapuus-api/v1/users',
+        url: API_URL + '/wapuus-api/v2/users',
         options: {
             method: 'POST',
             headers: {
@@ -53,7 +53,7 @@ export function USER_POST ( body ) {
 
 export function PHOTO_POST ( formData, token ) {
     return {
-        url: API_URL + '/wapuus-api/v1/images',
+        url: API_URL + '/wapuus-api/v2/images',
         options: {
             method: 'POST',
             headers: {
@@ -66,7 +66,7 @@ export function PHOTO_POST ( formData, token ) {
 
 export function PHOTOS_GET ( {page, total, user} ) {
     return {
-        url: `${API_URL}/wapuus-api/v1/images/?_page=${page}&_total=${total}&_user=${user}`,
+        url: `${API_URL}/wapuus-api/v2/images/?_page=${page}&_total=${total}&_user=${user}`,
         options: {
             method: 'GET',                  
             cache: 'no-store'
@@ -76,7 +76,7 @@ export function PHOTOS_GET ( {page, total, user} ) {
 
 export function PHOTO_GET ( id ) {
     return {
-        url: `${API_URL}/wapuus-api/v1/images/${id}`,
+        url: `${API_URL}/wapuus-api/v2/images/${id}`,
         options: {
             method: 'GET',                  
             cache: 'no-store'
@@ -86,7 +86,7 @@ export function PHOTO_GET ( id ) {
 
 export function COMMENT_POST ( id, body ) {
     return {
-        url: `${API_URL}/wapuus-api/v1/comments/${id}`,
+        url: `${API_URL}/wapuus-api/v2/comments/${id}`,
         options: {
             method: 'POST',            
             headers: {
@@ -100,7 +100,7 @@ export function COMMENT_POST ( id, body ) {
 
 export function COMMENT_DELETE ( id ) {
     return {
-        url: `${API_URL}/wapuus-api/v1/comments/${id}`,
+        url: `${API_URL}/wapuus-api/v2/comments/${id}`,
         options: {
             method: 'DELETE',            
             headers: {                
@@ -112,7 +112,7 @@ export function COMMENT_DELETE ( id ) {
 
 export function PHOTO_DELETE ( id ) {
     return {
-        url: `${API_URL}/wapuus-api/v1/images/${id}`,
+        url: `${API_URL}/wapuus-api/v2/images/${id}`,
         options: {
             method: 'DELETE',            
             headers: {                
@@ -124,7 +124,7 @@ export function PHOTO_DELETE ( id ) {
 
 export function PASSWORD_LOST ( body ) {
     return {
-        url: `${API_URL}/wapuus-api/v1/password/lost`,
+        url: `${API_URL}/wapuus-api/v2/password/lost`,
         options: {
             method: 'POST',            
             headers: {
@@ -137,7 +137,7 @@ export function PASSWORD_LOST ( body ) {
 
 export function PASSWORD_RESET ( body ) {
     return {
-        url: `${API_URL}/wapuus-api/v1/password/reset`,
+        url: `${API_URL}/wapuus-api/v2/password/reset`,
         options: {
             method: 'POST',            
             headers: {
