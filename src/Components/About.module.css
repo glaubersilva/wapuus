@@ -1,12 +1,39 @@
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+.about h2 {
+    line-height: 2.7rem;
+}
+
+.about a {
+    padding: 0;
+}
+
+.about p {
+    line-height: 1.5rem;
+}
+
+.about figure {
+    margin: auto;
+    width: 50%;
+    width: 250px;
+    padding: 20px;
+    float: right;
+    margin-left: 20px;
+}
+
+.about figcaption {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
 }
 
 @media (max-width: 40rem) {
-    .about {
-        grid-template-columns: 1fr;
+    .about figure {
+        margin: auto;
+        width: 50%;
+        float: none;
+    }
+
+    .about figcaption {
+        text-align: center;
     }
 }

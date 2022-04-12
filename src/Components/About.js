@@ -1,11 +1,10 @@
 import React from "react";
-//import styles from './About.module.css';
-import { ReactComponent as Wapuu } from "../Assets/wapuu-original.svg";
-//import { ReactComponent as Wapuu } from "../Assets/demo/original-wapuu.png";
+import styles from "./About.module.css";
+import Wapuu from "../Assets/demo/original-wapuu.png";
 
 const About = () => {
     return (
-        <section className="container">
+        <section className={` ${styles.about} container `}>
             <h1 className="title">About</h1>
             <p>
                 This web app is <i>"A place to share Wapuus"</i> where anyone
@@ -22,7 +21,7 @@ const About = () => {
             <br />
             <p>
                 <figure>
-                    <Wapuu />
+                    <img src={Wapuu} alt="The original Wapuu" />
                     <figcaption>The original Wapuu</figcaption>
                 </figure>
             </p>
