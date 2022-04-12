@@ -19,7 +19,7 @@
 }
 
 .subtitle::after {
-    content: '';
+    content: "";
     display: block;
     background: #ddd;
     height: 0.5rem;

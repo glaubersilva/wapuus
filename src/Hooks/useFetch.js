@@ -1,43 +1,41 @@
-import React from 'react';
+import React from "react";
 
 const useFetch = () => {
-
     const [data, setData] = React.useState(null);
     const [error, setError] = React.useState(null);
     const [loading, setLoading] = React.useState(false);
 
-    const request = React.useCallback( async (url, options) => {
-       let response;
-       let json; 
+    const request = React.useCallback(async (url, options) => {
+        let response;
+        let json;
 
-        try {            
+        try {
             setError(null);
             setLoading(true);
-            response = await fetch( url, options );
-            console.log('response: ', response);
+            response = await fetch(url, options);
+            console.log("response: ", response);
             json = await response.json();
             //console.log('response.json(): ', json);
-            if (response.ok === false) {                
-                throw new Error( json.message );                
-            }    
-        } catch ( exception ) {
+            if (response.ok === false) {
+                throw new Error(json.message);
+            }
+        } catch (exception) {
             json = null;
             //console.log( 'exception.message: ', exception.message );
-            setError( exception.message );
+            setError(exception.message);
         } finally {
             setData(json);
             setLoading(false);
-            return {response, json};
+            return { response, json };
         }
-
     }, []);
 
-    return ({
+    return {
         data,
         loading,
         error,
         request,
-    } )
-}
+    };
+};
 
 export default useFetch;

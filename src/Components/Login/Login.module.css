@@ -7,11 +7,10 @@
 
 .login::before {
     display: block;
-    content: '';
-    background: url('../../Assets/login-bg.png') no-repeat center center;
+    content: "";
+    background: url("../../Assets/login-bg.png") no-repeat center center;
     background-size: cover;
 }
-
 
 .forms {
     max-width: 30rem;
@@ -19,7 +18,7 @@
     margin-top: 20vh;
 }
 
-@media ( max-width: 40rem ) {
+@media (max-width: 40rem) {
     .login {
         grid-template-columns: 1fr;
     }

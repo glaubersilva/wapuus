@@ -23,13 +23,13 @@
 }
 .textarea {
     display: block;
-    width: 100%;    
+    width: 100%;
     font-size: 1rem;
     font-family: var(--type-first);
     resize: none;
     border: 1px solid #eee;
-    padding: .5rem;
-    border-radius: .2rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
     background: #eee;
     transition: 0.2s;
     margin-bottom: 1rem;
@@ -50,7 +50,7 @@
     background: transparent;
     font-size: 1rem;
     padding: 0 1rem;
-    overflow: hidden;    
+    overflow: hidden;
     transform: scale(1.4);
     margin: -2px 0 0 10px;
 }
@@ -62,7 +62,7 @@
 }
 
 .preview::after {
-    content: '';
+    content: "";
     display: block;
     height: 0px;
     padding-bottom: 100%;

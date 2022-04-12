@@ -1,17 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 //import { TOKEN_POST, USER_GET } from '../../api';
-import useForm from '../../Hooks/useForm';
-import Button from '../Forms/Button';
-import Input from '../Forms/Input';
-import { UserContext } from '../../UserContext';
-import Error from '../Helpers/Error';
-import styles from './LoginForm.module.css';
-import stylesBtn from '../Forms/Button.module.css';
-import Head from '../Helpers/Head';
+import useForm from "../../Hooks/useForm";
+import Button from "../Forms/Button";
+import Input from "../Forms/Input";
+import { UserContext } from "../../UserContext";
+import Error from "../Helpers/Error";
+import styles from "./LoginForm.module.css";
+import stylesBtn from "../Forms/Button.module.css";
+import Head from "../Helpers/Head";
 
 const LoginForm = () => {
-
     //const [username, setUsername] = React.useState('');
     //const [password, setPassword] = React.useState('');
 
@@ -20,7 +19,7 @@ const LoginForm = () => {
     //console.log('Username: ', username.value);
     //console.log('Password: ', password.value);
 
-    const { userLogin, error, loading } = React.useContext( UserContext );    
+    const { userLogin, error, loading } = React.useContext(UserContext);
 
     /*React.useEffect( () => {
 
@@ -39,15 +38,13 @@ const LoginForm = () => {
         console.log(json);
     }*/
 
-    async function handleSubmit( event ) {
+    async function handleSubmit(event) {
         event.preventDefault();
 
+        if (username.validate() && password.validate()) {
+            userLogin(username.value, password.value);
 
-        if ( username.validate() && password.validate() ){
-
-            userLogin( username.value, password.value );
-
-           /* const { url, options } = TOKEN_POST( {
+            /* const { url, options } = TOKEN_POST( {
                 username: username.value, 
                 password: password.value
             } );
@@ -68,22 +65,35 @@ const LoginForm = () => {
      */
     return (
         <section className="animeLeft">
-            <Head title="Login" description=""/>
+            <Head title="Login" description="" />
             <h1 className="title">Login</h1>
-            <form className={styles.form} onSubmit={ handleSubmit } >
+            <form className={styles.form} onSubmit={handleSubmit}>
                 <Input label="User" type="text" name="username" {...username} />
-                <Input label="Password" type="password" name="password" {...password} />
-                { loading ? <Button disabled>Loading...</Button> : <Button>Enter</Button> }                
-                <Error message={error && 'User or Password Invalid'} />                
-            </form>            
-            <Link className="link" to="/login/lost">Lost the Password?</Link>
+                <Input
+                    label="Password"
+                    type="password"
+                    name="password"
+                    {...password}
+                />
+                {loading ? (
+                    <Button disabled>Loading...</Button>
+                ) : (
+                    <Button>Enter</Button>
+                )}
+                <Error message={error && "User or Password Invalid"} />
+            </form>
+            <Link className="link" to="/login/lost">
+                Lost the Password?
+            </Link>
             <div className={styles.create}>
-                <h2 className={styles.subtitle} >Register</h2>
+                <h2 className={styles.subtitle}>Register</h2>
                 <p>Don't have an account yet? Register on the website.</p>
-                <Link className={stylesBtn.button} to="/login/create">New User</Link>
-            </div>            
+                <Link className={stylesBtn.button} to="/login/create">
+                    New User
+                </Link>
+            </div>
         </section>
-    )
-}
+    );
+};
 
 export default LoginForm;

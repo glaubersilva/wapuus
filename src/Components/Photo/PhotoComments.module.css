@@ -1,16 +1,16 @@
 .comments {
-  overflow-y: auto;
-  word-break: break-word;
-  padding: 0 2rem;
+    overflow-y: auto;
+    word-break: break-word;
+    padding: 0 2rem;
 }
 
 .single.comments {
-  padding: 0px;
+    padding: 0px;
 }
 
 .comments li {
-  margin-bottom: 0.7rem;
-  line-height: 1.2;
-  /*padding: 0.3rem 0 0.8rem 0;
+    margin-bottom: 0.7rem;
+    line-height: 1.2;
+    /*padding: 0.3rem 0 0.8rem 0;
   border-bottom: solid 1px #eee;*/
 }

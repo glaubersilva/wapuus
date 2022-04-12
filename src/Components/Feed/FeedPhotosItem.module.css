@@ -7,7 +7,7 @@
     .photo:nth-child(2) {
         grid-column: initial;
         grid-row: initial;
-    }   
+    }
 }
 
 .photo {
@@ -21,11 +21,11 @@
     grid-area: 1/1;
 }
 
-.views {    
+.views {
     background: rgba(0, 0, 0, 0.3);
     color: white;
     font-size: 1rem;
-    text-align: center;    
+    text-align: center;
     align-items: center;
     justify-content: center;
     grid-area: 1/1;
@@ -35,10 +35,10 @@
 .views::before {
     width: 16px;
     height: 10px;
-    content: '';
+    content: "";
     display: inline-block;
-    margin-right: .25rem;
-    background: url('../../Assets/view.svg') no-repeat;
+    margin-right: 0.25rem;
+    background: url("../../Assets/view.svg") no-repeat;
 }
 
 .photo:hover .views {
