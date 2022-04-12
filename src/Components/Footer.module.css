@@ -20,10 +20,10 @@
 }
 
 .footer svg {
-    margin-bottom: -2rem;
+    margin-bottom: -2.2rem;
 }
 .logoFooterText {
-    margin: -1rem 0 0 0.2rem;
+    margin: -1rem 0 0 0.5rem;
     font-weight: bold;
-    font-family: --type-second;
+    font-family: var(--type-second);
 }

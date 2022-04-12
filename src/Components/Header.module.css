@@ -22,12 +22,11 @@
 }
 
 .logoText {
-    margin: -1rem 0 0 -0.2rem;
+    margin: -1.22rem 0 0 -0.2rem;
     font-weight: bold;
-    font-family: --type-second;
+    font-family: var(--type-second);
     text-align: center;
 }
-
 .about {
     color: #333;
     display: flex;
