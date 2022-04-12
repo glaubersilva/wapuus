@@ -1,6 +1,7 @@
 import React from "react";
 //import styles from './About.module.css';
-//import {ReactComponent as Logo} from '../Assets/wapuu-footer-logo.svg';
+import { ReactComponent as Wapuu } from "../Assets/wapuu-original.svg";
+//import { ReactComponent as Wapuu } from "../Assets/demo/original-wapuu.png";
 
 const About = () => {
     return (
@@ -17,6 +18,13 @@ const About = () => {
                 The Wapuu character was created to be the official mascot of the
                 Japanese WordPress community, but these days it's considered the
                 official mascot of the global WordPress community as well.
+            </p>
+            <br />
+            <p>
+                <figure>
+                    <Wapuu />
+                    <figcaption>The original Wapuu</figcaption>
+                </figure>
             </p>
             <br />
             <p>
@@ -69,13 +77,13 @@ const About = () => {
                     className="link"
                     target="_blank"
                     rel="noreferrer"
-                    href="https://github.com/glaubersilva/wapuus"
+                    href="https://github.com/glaubersilva/wapuus-api"
                 >
-                    the frontend (available on GitHub)
+                    the backend (available on GitHub)
                 </a>{" "}
-                where you are reading this text right now, this is totally
-                decoupled from WordPress and built with HTML, CSS, Javascript,
-                and the ReactJS library;
+                which is a WordPress plugin, so is built with PHP, that extends
+                the WordPress REST API and exposes the endpoints used by part #2
+                of this project;
             </p>
             <br />
             <p>
@@ -84,13 +92,13 @@ const About = () => {
                     className="link"
                     target="_blank"
                     rel="noreferrer"
-                    href="https://github.com/glaubersilva/wapuus-api"
+                    href="https://github.com/glaubersilva/wapuus"
                 >
-                    the backend (available on GitHub)
+                    the frontend (available on GitHub)
                 </a>{" "}
-                which is a WordPress plugin, so is built with PHP, that extends
-                the WordPress REST API and exposes the endpoints used by part #1
-                of this project.
+                where you are reading this text right now, this is totally
+                decoupled from WordPress and built with HTML, CSS, Javascript,
+                and the ReactJS library.
             </p>
             <br />
             <p>
@@ -99,6 +107,83 @@ const About = () => {
                 setup that uses WordPress on the backend for managing content
                 and some other custom frontend stack to actually display that
                 content to a site visitor.
+            </p>
+            <br />
+            <h2>Special thanks</h2>
+            <br />
+            <p>
+                This project wouldn't be possible without{" "}
+                <a
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://make.wordpress.org/"
+                >
+                    all the amazing people who make WordPress exist
+                </a>
+                , so I'm really grateful for all work done by this beautiful
+                global community, in special the team behind the{" "}
+                <a
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://make.wordpress.org/core/components/rest-api/"
+                >
+                    REST API component
+                </a>{" "}
+                that was the central piece of this project.
+            </p>
+            <br />
+            <p>
+                I'm also really grateful to{" "}
+                <a
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://saopaulo.wordcamp.org/2020/trilha-a/"
+                >
+                    WordCamp São Paulo 2020
+                </a>{" "}
+                and the{" "}
+                <a
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://github.com/leogermani/interfaces-invisiveis"
+                >
+                    great content from the Leo Germani talk
+                </a>{" "}
+                that helped me better understand the possibilities of the WP
+                REST API.
+            </p>
+            <br />
+            <p>
+                Still on the backend side, I would like to thank the{" "}
+                <a
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://carlalexander.ca/designing-system-wordpress-rest-api-endpoints/"
+                >
+                    amazing article from Carl Alexander
+                </a>{" "}
+                that helped me to implement a better code design for extending
+                the WP REST API endpoints in a more elegant way.
+            </p>
+            <br />
+            <p>
+                On the frontend side, I would like to thank the{" "}
+                <a
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.origamid.com/curso/react-completo/"
+                >
+                    amazing React course from Origamid/André Rafael
+                </a>{" "}
+                that helped me to better understand how this library works.
+                Beyond that, the course also gave me the "design system" for the
+                app and the big inspiration to build this project.
             </p>
             <br />
             <h2>Want to talk to us?</h2>
