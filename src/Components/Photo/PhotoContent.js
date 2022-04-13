@@ -11,6 +11,10 @@ const PhotoContent = ({ data, single }) => {
     console.log("data", data);
     const { image, comments } = data;
 
+    single
+        ? (document.querySelector("body").style.overflow = "auto") // Enable scroll
+        : (document.querySelector("body").style.overflow = "hidden"); // Disable scroll
+
     return (
         <div className={`${styles.photo} ${single ? styles.single : ""}`}>
             <div className={styles.img}>

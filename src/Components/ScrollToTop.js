@@ -6,6 +6,7 @@ export default function ScrollToTop() {
 
     useEffect(() => {
         //console.log('ScrollToTop');
+        document.querySelector("body").style.overflow = "auto"; // Enable scroll
         window.scrollTo(0, 0);
     }, [pathname]);
 

@@ -33,6 +33,7 @@
 }
 
 .img {
+    padding: 1rem;
     grid-row: 1/4;
 }
 
@@ -44,11 +45,17 @@
 
 @media (max-width: 64rem) {
     .photo {
+        margin-top: 4rem;
         height: auto;
-        max-height: calc(100vh - 4rem);
+        min-width: 320px;
+        max-height: calc(100vh - 8rem);
         overflow-y: auto;
         grid-template-columns: minmax(20rem, 40rem);
         grid-template-rows: auto;
+    }
+    .single.photo {
+        max-height: none;
+        padding-bottom: 4rem;
     }
     .img {
         grid-row: 1;
