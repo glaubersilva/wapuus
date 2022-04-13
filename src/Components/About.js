@@ -181,8 +181,8 @@ const About = () => {
                     amazing React course from Origamid/André Rafael
                 </a>{" "}
                 that helped me to better understand how this library works.
-                Beyond that, the course also gave me the "design system" for the
-                app and the big inspiration to build this project.
+                Beyond that, the course also gave me the <i>"design system"</i>{" "}
+                for the app and the big inspiration to build this project.
             </p>
             <br />
             <h2>Want to talk to us?</h2>
