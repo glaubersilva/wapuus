@@ -19,12 +19,12 @@ const About = () => {
                 official mascot of the global WordPress community as well.
             </p>
             <br />
-            <p>
+            <div>
                 <figure>
                     <img src={Wapuu} alt="The original Wapuu" />
                     <figcaption>The original Wapuu</figcaption>
                 </figure>
-            </p>
+            </div>
             <br />
             <p>
                 As it's under the GPL license, anyone can{" "}
