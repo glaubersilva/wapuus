@@ -1,6 +1,6 @@
 import React from "react";
-import PhotoGet from "./endpoints/PhotoGet";
-import PhotoPost from "./endpoints/PhotoPost";
+import ImageGet from "./endpoints/ImageGet";
+import ImagePost from "./endpoints/ImagePost";
 import TokenPost from "./endpoints/TokenPost";
 import UserPost from "./endpoints/UserPost";
 
@@ -11,10 +11,10 @@ function Api() {
             <UserPost />
             <h2>TOKEN POST</h2>
             <TokenPost />
-            <h2>PHOTO POST</h2>
-            <PhotoPost />
-            <h2>PHOTO GET</h2>
-            <PhotoGet />
+            <h2>IMAGE POST</h2>
+            <ImagePost />
+            <h2>IMAGE GET</h2>
+            <ImageGet />
         </div>
     );
 }

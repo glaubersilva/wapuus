@@ -3,22 +3,22 @@ import styles from "./FeedModal.module.css";
 import useFetch from "../../Hooks/useFetch";
 import Error from "../Helpers/Error";
 import Loading from "../Helpers/Loading";
-import { PHOTO_GET } from "../../api";
-import PhotoContent from "../Photo/PhotoContent";
+import { IMAGE_GET } from "../../api";
+import ImageContent from "../Image/ImageContent";
 
-const FeedModal = ({ photo, setModalPhoto }) => {
+const FeedModal = ({ image, setModalImage }) => {
     const { data, error, loading, request } = useFetch();
 
     React.useEffect(() => {
-        const { url, options } = PHOTO_GET(photo.id);
+        const { url, options } = IMAGE_GET(image.id);
         request(url, options);
         document.querySelector("body").style.overflow = "hidden"; // Disable scroll
-    }, [photo, request]);
+    }, [image, request]);
 
     function handleOutsideClick(event) {
         if (event.target === event.currentTarget) {
             document.querySelector("body").style.overflow = "auto"; // Enable scroll
-            setModalPhoto(null);
+            setModalImage(null);
         }
     }
 
@@ -26,7 +26,7 @@ const FeedModal = ({ photo, setModalPhoto }) => {
         <div className={styles.modal} onClick={handleOutsideClick}>
             {error && <Error error={error} />}
             {loading && <Loading />}
-            {data && <PhotoContent data={data} />}
+            {data && <ImageContent data={data} />}
         </div>
     );
 };

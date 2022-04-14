@@ -57,7 +57,7 @@ export function USER_POST(body) {
     };
 }
 
-export function PHOTO_POST(formData, token) {
+export function IMAGE_POST(formData, token) {
     return {
         url: API_URL + "/wapuus-api/v2/images",
         options: {
@@ -70,7 +70,7 @@ export function PHOTO_POST(formData, token) {
     };
 }
 
-export function PHOTOS_GET({ page, total, user }) {
+export function IMAGES_GET({ page, total, user }) {
     return {
         url: `${API_URL}/wapuus-api/v2/images/?_page=${page}&_total=${total}&_user=${user}`,
         options: {
@@ -80,7 +80,7 @@ export function PHOTOS_GET({ page, total, user }) {
     };
 }
 
-export function PHOTO_GET(id) {
+export function IMAGE_GET(id) {
     return {
         url: `${API_URL}/wapuus-api/v2/images/${id}`,
         options: {
@@ -116,7 +116,7 @@ export function COMMENT_DELETE(id) {
     };
 }
 
-export function PHOTO_DELETE(id) {
+export function IMAGE_DELETE(id) {
     return {
         url: `${API_URL}/wapuus-api/v2/images/${id}`,
         options: {

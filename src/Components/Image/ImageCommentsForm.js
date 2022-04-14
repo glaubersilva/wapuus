@@ -4,9 +4,9 @@ import { COMMENT_POST } from "../../api";
 import { ReactComponent as Send } from "../../Assets/send.svg";
 import useFetch from "../../Hooks/useFetch";
 import Error from "../Helpers/Error";
-import styles from "./PhotoCommentsForm.module.css";
+import styles from "./ImageCommentsForm.module.css";
 
-const PhotoCommentsForm = ({ id, setComments, single }) => {
+const ImageCommentsForm = ({ id, setComments, single }) => {
     const [comment, setComment] = React.useState("");
     const [loading, setLoading] = React.useState(false);
     const { request, error } = useFetch();
@@ -50,4 +50,4 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
     );
 };
 
-export default PhotoCommentsForm;
+export default ImageCommentsForm;

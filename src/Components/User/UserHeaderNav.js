@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { UserContext } from "../../UserContext";
 import { ReactComponent as MyFeed } from "../../Assets/feed.svg";
 import { ReactComponent as MyStats } from "../../Assets/stats.svg";
-import { ReactComponent as AddPhoto } from "../../Assets/add.svg";
+import { ReactComponent as AddImage } from "../../Assets/add.svg";
 import { ReactComponent as Exit } from "../../Assets/exit.svg";
 import styles from "./UserHeaderNav.module.css";
 import useMedia from "../../Hooks/useMedia";
@@ -44,7 +44,7 @@ const UserHeaderNav = () => {
                     {mobile && "Stats"}
                 </NavLink>
                 <NavLink to="/account/post" activeClassName={styles.active}>
-                    <AddPhoto />
+                    <AddImage />
                     {mobile && "Post Wapuu"}
                 </NavLink>
                 <button onClick={userLogout}>

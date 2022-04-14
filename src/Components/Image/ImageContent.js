@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../UserContext";
-import PhotoComments from "./PhotoComments";
-import styles from "./PhotoContent.module.css";
-import PhotoDelete from "./PhotoDelete";
+import ImageComments from "./ImageComments";
+import styles from "./ImageContent.module.css";
+import ImageDelete from "./ImageDelete";
 import Image from "../Helpers/Image";
 
-const PhotoContent = ({ data, single }) => {
+const ImageContent = ({ data, single }) => {
     const user = React.useContext(UserContext);
     console.log("data", data);
     const { image, comments } = data;
@@ -16,7 +16,7 @@ const PhotoContent = ({ data, single }) => {
         : (document.querySelector("body").style.overflow = "hidden"); // Disable scroll
 
     return (
-        <div className={`${styles.photo} ${single ? styles.single : ""}`}>
+        <div className={`${styles.image} ${single ? styles.single : ""}`}>
             <div className={styles.img}>
                 <Image src={image.src} alt={image.title} />
             </div>
@@ -24,7 +24,7 @@ const PhotoContent = ({ data, single }) => {
                 <div>
                     <p className={styles.author}>
                         {user.data && user.data.username === image.author ? (
-                            <PhotoDelete id={image.id} />
+                            <ImageDelete id={image.id} />
                         ) : (
                             <Link to={`/profile/${image.author}`}>
                                 @{image.author}
@@ -33,7 +33,7 @@ const PhotoContent = ({ data, single }) => {
                         <span className={styles.views}>{image.views}</span>
                     </p>
                     <h1 className="title">
-                        <Link to={`/photo/${image.id}`}>{image.title}</Link>
+                        <Link to={`/image/${image.id}`}>{image.title}</Link>
                     </h1>
                     <ul className={styles.attributes}>
                         <li>
@@ -53,7 +53,7 @@ const PhotoContent = ({ data, single }) => {
                     </div>
                 </div>
             </div>
-            <PhotoComments
+            <ImageComments
                 single={single}
                 id={image.id}
                 comments={comments}
@@ -63,4 +63,4 @@ const PhotoContent = ({ data, single }) => {
     );
 };
 
-export default PhotoContent;
+export default ImageContent;

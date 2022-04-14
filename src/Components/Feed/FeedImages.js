@@ -1,25 +1,25 @@
 import React from "react";
-import FeedPhotosItem from "./FeedPhotosItem";
+import FeedImagesItem from "./FeedImagesItem";
 import useFetch from "../../Hooks/useFetch";
-import { PHOTOS_GET } from "../../api";
+import { IMAGES_GET } from "../../api";
 import Error from "../Helpers/Error";
 import Loading from "../Helpers/Loading";
-import styles from "./FeedPhotos.module.css";
+import styles from "./FeedImages.module.css";
 
-const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
+const FeedImages = ({ page, user, setModalImage, setInfinite }) => {
     const { data, loading, error, request } = useFetch();
 
     React.useEffect(() => {
-        async function fetchPhotos() {
+        async function fetchImages() {
             const total = 6;
-            const { url, options } = PHOTOS_GET({ page, total, user });
+            const { url, options } = IMAGES_GET({ page, total, user });
             const { response, json } = await request(url, options);
             if (response && response.ok && json.length < total)
                 setInfinite(false);
             console.log(json);
         }
 
-        fetchPhotos();
+        fetchImages();
     }, [request, user, page, setInfinite]);
 
     if (error) return <Error message={error} />;
@@ -27,11 +27,11 @@ const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
     if (data) {
         return (
             <ul className={`${styles.feed} animeLeft`}>
-                {data.map((photo) => (
-                    <FeedPhotosItem
-                        key={photo.id}
-                        photo={photo}
-                        setModalPhoto={setModalPhoto}
+                {data.map((image) => (
+                    <FeedImagesItem
+                        key={image.id}
+                        image={image}
+                        setModalImage={setModalImage}
                     />
                 ))}
             </ul>
@@ -41,4 +41,4 @@ const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
     }
 };
 
-export default FeedPhotos;
+export default FeedImages;

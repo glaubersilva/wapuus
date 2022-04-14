@@ -1,4 +1,4 @@
-.photo {
+.image {
     margin: auto;
     height: 36rem;
     border-radius: 0.2rem;
@@ -12,7 +12,7 @@
     animation: scaleUp 0.3s forwards;
 }
 
-.single.photo {
+.single.image {
     grid-template-columns: 1fr;
     height: auto;
     padding-bottom: 4rem;
@@ -45,7 +45,7 @@
 }
 
 @media (max-width: 64rem) {
-    .photo {
+    .image {
         margin-top: 4rem;
         height: auto;
         min-width: 320px;
@@ -54,7 +54,7 @@
         grid-template-columns: minmax(20rem, 40rem);
         grid-template-rows: auto;
     }
-    .single.photo {
+    .single.image {
         max-height: none;
     }
     .img {

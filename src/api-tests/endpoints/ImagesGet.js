@@ -1,12 +1,12 @@
 import React from "react";
 
-const PhotoGet = () => {
+const ImageGet = () => {
     const [id, setId] = React.useState("");
 
     function handleSubmit(event) {
         event.preventDefault();
 
-        fetch(`https://wapuus-api.local/json/wapuus-api/v1/photos/${id}`)
+        fetch(`https://wapuus-api.local/json/wapuus-api/v1/images/${id}`)
             .then((response) => {
                 console.log(response);
                 return response.json();
@@ -30,4 +30,4 @@ const PhotoGet = () => {
     );
 };
 
-export default PhotoGet;
+export default ImageGet;

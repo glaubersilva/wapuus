@@ -1,9 +1,9 @@
 import React from "react";
 import { COMMENT_DELETE } from "../../api";
 import useFetch from "../../Hooks/useFetch";
-import styles from "./PhotoCommentDelete.module.css";
+import styles from "./ImageCommentDelete.module.css";
 
-const PhotoCommentDelete = ({ id }) => {
+const ImageCommentDelete = ({ id }) => {
     const { loading, request } = useFetch();
 
     async function handleClick(event) {
@@ -32,4 +32,4 @@ const PhotoCommentDelete = ({ id }) => {
     );
 };
 
-export default PhotoCommentDelete;
+export default ImageCommentDelete;

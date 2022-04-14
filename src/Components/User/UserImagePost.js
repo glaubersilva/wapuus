@@ -1,15 +1,15 @@
 import React from "react";
-import styles from "./UserPhotoPost.module.css";
+import styles from "./UserImagePost.module.css";
 import useForm from "../../Hooks/useForm";
 import useFetch from "../../Hooks/useFetch";
 import Input from "../Forms/Input";
 import Button from "../Forms/Button";
 import Error from "../Helpers/Error";
-import { PHOTO_POST } from "../../api";
+import { IMAGE_POST } from "../../api";
 import { useNavigate } from "react-router";
 import Head from "../Helpers/Head";
 
-const UserPhotoPost = () => {
+const UserImagePost = () => {
     const name = useForm();
 
     const from = useForm(false);
@@ -37,7 +37,7 @@ const UserPhotoPost = () => {
         formData.append("caption", caption);
 
         const token = window.localStorage.getItem("token");
-        const { url, options } = PHOTO_POST(formData, token);
+        const { url, options } = IMAGE_POST(formData, token);
         request(url, options);
     }
 
@@ -49,8 +49,8 @@ const UserPhotoPost = () => {
     }
 
     return (
-        <section className={` ${styles.photoPost} animeLeft`}>
-            <Head title="Posts" description="Upload your Wappu photo" />
+        <section className={` ${styles.imagePost} animeLeft`}>
+            <Head title="Posts" description="Upload your Wappu image" />
             <form onSubmit={handleSubmit}>
                 <Input
                     label="Image - should be a JPG or PNG file with at least 1000 X 1000 pixels and can't be greater than 1MB:"
@@ -115,4 +115,4 @@ const UserPhotoPost = () => {
     );
 };
 
-export default UserPhotoPost;
+export default UserImagePost;

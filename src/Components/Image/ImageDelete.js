@@ -1,9 +1,9 @@
 import React from "react";
-import { PHOTO_DELETE } from "../../api";
+import { IMAGE_DELETE } from "../../api";
 import useFetch from "../../Hooks/useFetch";
-import styles from "./PhotoDelete.module.css";
+import styles from "./ImageDelete.module.css";
 
-const PhotoDelete = ({ id }) => {
+const ImageDelete = ({ id }) => {
     const { loading, request } = useFetch();
 
     async function handleClick(event) {
@@ -11,7 +11,7 @@ const PhotoDelete = ({ id }) => {
 
         if (confirm) {
             event.preventDefault();
-            const { url, options } = PHOTO_DELETE(id);
+            const { url, options } = IMAGE_DELETE(id);
             const { response } = await request(url, options);
             if (response.ok) window.location.reload();
         }
@@ -32,4 +32,4 @@ const PhotoDelete = ({ id }) => {
     );
 };
 
-export default PhotoDelete;
+export default ImageDelete;

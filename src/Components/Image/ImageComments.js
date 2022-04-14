@@ -1,10 +1,10 @@
 import React from "react";
 import { UserContext } from "../../UserContext";
-import PhotoCommentsForm from "./PhotoCommentsForm";
-import styles from "./PhotoComments.module.css";
-import PhotoCommentDelete from "./PhotoCommentDelete";
+import ImageCommentsForm from "./ImageCommentsForm";
+import styles from "./ImageComments.module.css";
+import ImageCommentDelete from "./ImageCommentDelete";
 
-const PhotoComments = (props) => {
+const ImageComments = (props) => {
     const [comments, setComments] = React.useState(() => props.comments);
     const commentsSection = React.useRef(null);
     const { login } = React.useContext(UserContext);
@@ -28,7 +28,7 @@ const PhotoComments = (props) => {
                         <b>{comment.author}: </b>
                         <span> {comment.comment} </span>
                         {user.data && user.data.username === comment.author ? (
-                            <PhotoCommentDelete id={comment.id} />
+                            <ImageCommentDelete id={comment.id} />
                         ) : (
                             ""
                         )}
@@ -36,7 +36,7 @@ const PhotoComments = (props) => {
                 ))}
             </ul>
             {login && (
-                <PhotoCommentsForm
+                <ImageCommentsForm
                     single={props.single}
                     id={props.id}
                     setComments={setComments}
@@ -46,4 +46,4 @@ const PhotoComments = (props) => {
     );
 };
 
-export default PhotoComments;
+export default ImageComments;

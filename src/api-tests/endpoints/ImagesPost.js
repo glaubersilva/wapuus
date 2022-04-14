@@ -1,6 +1,6 @@
 import React from "react";
 
-const PhotoPost = () => {
+const ImagePost = () => {
     const [token, setToken] = React.useState("");
     const [name, setName] = React.useState("");
     const [img, setImg] = React.useState("");
@@ -20,7 +20,7 @@ const PhotoPost = () => {
         formData.append("name", name);
         formData.append("img", img);
 
-        fetch("https://wapuus-api.local/json/wapuus-api/v1/photos", {
+        fetch("https://wapuus-api.local/json/wapuus-api/v1/images", {
             method: "POST",
             headers: {
                 Authorization: "Bearer " + token,
@@ -60,4 +60,4 @@ const PhotoPost = () => {
     );
 };
 
-export default PhotoPost;
+export default ImagePost;

@@ -1,11 +1,11 @@
 import React from "react";
 import FeedModal from "./FeedModal";
-import FeedPhotos from "./FeedPhotos";
+import FeedImages from "./FeedImages";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Feed = ({ user }) => {
-    const [modalPhoto, setModalPhoto] = React.useState(null);
+    const [modalImage, setModalImage] = React.useState(null);
     const [pages, setPages] = React.useState([1]);
     const [infinite, setInfinite] = React.useState(true);
 
@@ -35,15 +35,15 @@ const Feed = ({ user }) => {
 
     return (
         <div>
-            {modalPhoto && (
-                <FeedModal photo={modalPhoto} setModalPhoto={setModalPhoto} />
+            {modalImage && (
+                <FeedModal image={modalImage} setModalImage={setModalImage} />
             )}
             {pages.map((page) => (
-                <FeedPhotos
+                <FeedImages
                     key={page}
                     user={user}
                     page={page}
-                    setModalPhoto={setModalPhoto}
+                    setModalImage={setModalImage}
                     setInfinite={setInfinite}
                 />
             ))}
