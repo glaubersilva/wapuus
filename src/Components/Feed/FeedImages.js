@@ -17,7 +17,7 @@ const FeedImages = ({ page, user, setModalImage, setInfinite }) => {
 
     React.useEffect(() => {
         async function fetchImages() {
-            const total = 6;
+            const total = 8;
             const { url, options } = IMAGES_GET({ page, total, user });
             const { response, json } = await request(url, options);
             if (response && response.ok && json.length < total)
@@ -33,6 +33,7 @@ const FeedImages = ({ page, user, setModalImage, setInfinite }) => {
         fetchImages();
     }, [request, user, page, setInfinite, scrollToTop]);
 
+    //return <Loading />;
     if (error) return <Error message={error} />;
     page === 1 && scrollToTop && window.scrollTo(0, 0);
     if (loading) return <Loading />;

@@ -1,15 +1,15 @@
 .wrapper {
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     display: flex;
     top: 0px;
     left: 0px;
     z-index: 1000;
-    /*margin-top: -20%;*/
+    /*background-color: red;*/
 }
 
 .loading {
-    margin: auto;
+    margin: 80% auto;
     width: 80px;
     height: 80px;
     display: flex;

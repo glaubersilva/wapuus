@@ -2,7 +2,10 @@ import React from "react";
 
 const Head = (props) => {
     React.useEffect(() => {
-        document.title = props.title + " | Wapuus";
+        document.title =
+            props.title.charAt(0).toUpperCase() +
+            props.title.slice(1).toLowerCase() +
+            " | Wapuus";
         document
             .querySelector("meta[name='description']")
             .setAttribute("content", props.description || "");
