@@ -46,10 +46,11 @@
 
 @media (max-width: 64rem) {
     .image {
-        margin-top: 4rem;
+        /*margin-top: 4rem;*/
         height: auto;
         min-width: 320px;
-        max-height: calc(100vh - 8rem);
+        /*max-height: calc(100vh - 8rem);*/
+        max-height: calc(100vh - 4rem);
         overflow-y: auto;
         grid-template-columns: minmax(20rem, 40rem);
         grid-template-rows: auto;

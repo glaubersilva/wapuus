@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./About.module.css";
 import Wapuu from "../Assets/demo/original-wapuu.png";
+import Head from "./Helpers/Head";
 
 const About = () => {
     return (
         <section className={` ${styles.about} container `}>
+            <Head title="About" description="" />
             <h1 className="title">About</h1>
             <p>
                 This web app is <i>"A place to share Wapuus"</i> where anyone
