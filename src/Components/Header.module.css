@@ -22,7 +22,7 @@
 }
 
 .logoText {
-    margin: -1.23rem 0 0 -0.2rem;
+    margin: -1.23rem 0 0 -0.19rem;
     font-weight: bold;
     font-family: var(--type-second);
     text-align: center;
@@ -30,7 +30,7 @@
 .about {
     color: #333;
     display: flex;
-    flex: 1;
+    margin-left: auto;
     flex-direction: row-reverse;
     align-items: center;
 }

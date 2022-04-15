@@ -37,7 +37,7 @@ const FeedImages = ({ page, user, setModalImage, setInfinite }) => {
             </ul>
         );
     } else {
-        return "null";
+        return null;
     }
 };
 

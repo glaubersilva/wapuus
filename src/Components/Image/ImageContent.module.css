@@ -10,12 +10,13 @@
     opacity: 0;
     transform: scale(0.8);
     animation: scaleUp 0.3s forwards;
+    padding-bottom: 1rem;
 }
 
 .single.image {
     grid-template-columns: 1fr;
     height: auto;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
 }
 
 @keyframes scaleUp {
