@@ -8,7 +8,7 @@ import Image from "../Helpers/Image";
 
 const ImageContent = ({ data, single }) => {
     const user = React.useContext(UserContext);
-    console.log("data", data);
+    //console.log("data", data);
     const { image, comments } = data;
 
     single

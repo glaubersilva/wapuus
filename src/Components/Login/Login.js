@@ -10,7 +10,7 @@ import NotFound from "../NotFound";
 
 const Login = () => {
     const { login } = React.useContext(UserContext);
-    console.log("login:", login);
+    //console.log("login:", login);
 
     if (login === true) return <Navigate to="/account" />;
     return (

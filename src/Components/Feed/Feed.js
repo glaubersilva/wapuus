@@ -15,14 +15,21 @@ const Feed = ({ user }) => {
             if (infinite) {
                 const scroll = window.scrollY;
                 const height = document.body.offsetHeight - window.innerHeight;
+                //console.log("scroll: ", scroll);
+                //console.log("height: ", height);
+                //console.log("wait: ", wait);
                 if (scroll > height * 0.75 && !wait) {
                     setPages((pages) => [...pages, pages.length + 1]);
                     wait = true;
+
                     setTimeout(() => {
                         wait = false;
                     }, 500);
                 }
-            }
+            } /*else {
+                if (pages.length === 1) window.scrollTo(0, 0);
+                console.log("page: ", pages.length);
+            }*/
         }
 
         window.addEventListener("wheel", infiniteScroll);
@@ -47,7 +54,7 @@ const Feed = ({ user }) => {
                     setInfinite={setInfinite}
                 />
             ))}
-            {console.log("user: ", user)}
+            {/*console.log("user: ", user)*/}
             {!infinite &&
                 user > 0 &&
                 document.querySelectorAll("#root img").length === 0 && (

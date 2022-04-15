@@ -25,7 +25,7 @@ const LoginCreate = () => {
             url: window.location.href.replace("create", "reset"),
         });
         const { response } = await request(url, options);
-        console.log("response: ", response);
+        //console.log("response: ", response);
         if (response.ok) {
             //userLogin( username.value, password.value );
             alert("We just sent you an e-mail with a password creation link.");
