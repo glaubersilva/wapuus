@@ -8,11 +8,11 @@ const UserPost = () => {
     function handleSubmit(event) {
         event.preventDefault();
 
-        console.log({
+        /*console.log({
             username,
             email,
             password,
-        });
+        });*/
 
         fetch("https://wapuus-api.local/json/wapuus-api/v1/users", {
             method: "POST",
@@ -26,11 +26,11 @@ const UserPost = () => {
             }),
         })
             .then((response) => {
-                console.log(response);
+                //console.log(response);
                 return response.json();
             })
             .then((json) => {
-                console.log(json);
+                //console.log(json);
                 return json;
             });
     }

@@ -8,11 +8,11 @@ const ImageGet = () => {
 
         fetch(`https://wapuus-api.local/json/wapuus-api/v1/images/${id}`)
             .then((response) => {
-                console.log(response);
+                //console.log(response);
                 return response.json();
             })
             .then((json) => {
-                console.log(json);
+                //console.log(json);
                 return json;
             });
     }

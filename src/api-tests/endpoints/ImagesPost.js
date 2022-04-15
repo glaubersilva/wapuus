@@ -10,11 +10,11 @@ const ImagePost = () => {
     function handleSubmit(event) {
         event.preventDefault();
 
-        console.log({
+        /*console.log({
             token,
             name,
             img,
-        });
+        });*/
 
         const formData = new FormData();
         formData.append("name", name);
@@ -28,11 +28,11 @@ const ImagePost = () => {
             body: formData,
         })
             .then((response) => {
-                console.log(response);
+                //console.log(response);
                 return response.json();
             })
             .then((json) => {
-                console.log(json);
+                //console.log(json);
                 return json;
             });
     }
