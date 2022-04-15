@@ -17,7 +17,7 @@ const FeedImages = ({ page, user, setModalImage, setInfinite }) => {
 
     React.useEffect(() => {
         async function fetchImages() {
-            const total = 8;
+            const total = 6;
             const { url, options } = IMAGES_GET({ page, total, user });
             const { response, json } = await request(url, options);
             if (response && response.ok && json.length < total)
