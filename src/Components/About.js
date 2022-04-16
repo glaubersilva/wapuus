@@ -42,9 +42,18 @@ const About = () => {
             </p>
             <br />
             <p>
-                Lots of WordCamps, companies, and individuals around the world
-                already created their own Wapuus versions, which helped this
-                funny mascot become global.
+                Lots of{" "}
+                <a
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://make.wordpress.org/community/wordcamps/"
+                >
+                    WordCamps
+                </a>
+                , companies, and individuals around the world already created
+                their own Wapuus versions, which helped this funny mascot become
+                global.
             </p>
             <br />
             <p>
@@ -84,7 +93,16 @@ const About = () => {
                 </a>{" "}
                 which is a WordPress plugin, so is built with PHP, that extends
                 the WordPress REST API and exposes the endpoints used by part #2
-                of this project;
+                of this project - this part is hosted in a{" "}
+                <a
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://m.do.co/c/0c4dc2d984eb"
+                >
+                    Digital Ocean
+                </a>{" "}
+                server;
             </p>
             <br />
             <p>
@@ -99,7 +117,16 @@ const About = () => {
                 </a>{" "}
                 where you are reading this text right now, this is totally
                 decoupled from WordPress and built with HTML, CSS, Javascript,
-                and the ReactJS library.
+                and the ReactJS library - this part is hosted with{" "}
+                <a
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://pages.cloudflare.com/"
+                >
+                    CloudFlare Pages
+                </a>
+                .
             </p>
             <br />
             <p>
@@ -113,14 +140,14 @@ const About = () => {
             <h2>Special thanks</h2>
             <br />
             <p>
-                This project wouldn't be possible without{" "}
+                This project wouldn't be possible without all the amazing people{" "}
                 <a
                     className="link"
                     target="_blank"
                     rel="noreferrer"
                     href="https://make.wordpress.org/"
                 >
-                    all the amazing people who make WordPress exist
+                    who make WordPress exist
                 </a>
                 , so I'm really grateful for all work done by this beautiful
                 global community, in special the team behind the{" "}
@@ -152,10 +179,10 @@ const About = () => {
                     rel="noreferrer"
                     href="https://github.com/leogermani/interfaces-invisiveis"
                 >
-                    great content from the Leo Germani talk
+                    great content
                 </a>{" "}
-                that helped me better understand the possibilities of the WP
-                REST API.
+                from the Leo Germani talk that helped me better understand the
+                possibilities of the WP REST API.
             </p>
             <br />
             <p>
@@ -166,10 +193,11 @@ const About = () => {
                     rel="noreferrer"
                     href="https://carlalexander.ca/designing-system-wordpress-rest-api-endpoints/"
                 >
-                    amazing article from Carl Alexander
+                    awesome article
                 </a>{" "}
-                that helped me to implement a better code design for extending
-                the WP REST API endpoints in a more elegant way.
+                from Carl Alexander that helped me to implement a better code
+                design for extending the WP REST API endpoints in a more elegant
+                way.
             </p>
             <br />
             <p>
@@ -180,11 +208,12 @@ const About = () => {
                     rel="noreferrer"
                     href="https://www.origamid.com/curso/react-completo/"
                 >
-                    amazing React course from Origamid/André Rafael
+                    amazing React course
                 </a>{" "}
-                that helped me to better understand how this library works.
-                Beyond that, the course also gave me the <i>"design system"</i>{" "}
-                for the app and the big inspiration to build this project.
+                from Origamid/André Rafael that helped me to better understand
+                how this library works. Beyond that, the course also gave me the{" "}
+                <i>"design system"</i> for the app and the big inspiration to
+                build this project.
             </p>
             <br />
             <h2>Want to talk to us?</h2>
