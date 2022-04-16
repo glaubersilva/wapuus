@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Wapuus - React App
+
+**IMPORTANT:** for local development, you'll need to install the WordPress plugin that implements the API locally because the live API available on *api.wapuus.org* is restricted just to the *wapuus.org* domain.
+
+So, check the link below:
+
+[How setup the Wapuus API locally »](https://github.com/glaubersilva/wapuus-api#wapuus-api---wordpress-plugin "Wapuus API README.md")
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
