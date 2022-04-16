@@ -116,7 +116,7 @@ const About = () => {
                     the frontend (available on GitHub)
                 </a>{" "}
                 where you are reading this text right now, this is totally
-                decoupled from WordPress and built with HTML, CSS, Javascript,
+                decoupled from WordPress and built with HTML, CSS, JavaScript,
                 and the ReactJS library - this part is hosted with{" "}
                 <a
                     className="link"
