@@ -74,7 +74,7 @@ const About = () => {
                     Glauber Silva
                 </a>
                 , this project beyond serving to be{" "}
-                <i>"A place to share Wapus"</i> it's also a place to
+                <i>"A place to share Wapuus"</i> it's also a place to
                 study/acquire more developer skills in a practical and funny
                 way.
             </p>
@@ -91,7 +91,7 @@ const About = () => {
                 >
                     the backend (available on GitHub)
                 </a>{" "}
-                which is a WordPress plugin, so is built with PHP, that extends
+                which is a WordPress plugin, so is built with PHP, which extends
                 the WordPress REST API and exposes the endpoints used by part #2
                 of this project - this part is hosted in a{" "}
                 <a
