@@ -33,9 +33,13 @@ function App() {
                             <Route path="/" element={<Home />} />
                             <Route path="/about/*" element={<About />} />
                             <Route path="/login/*" element={<Login />} />
-                            <ProtectedRoute
+                            <Route
                                 path="/account/*"
-                                element={<User />}
+                                element={
+                                    <ProtectedRoute>
+                                        <User />
+                                    </ProtectedRoute>
+                                }
                             />
                             <Route path="/image/:id" element={<Image />} />
                             <Route
