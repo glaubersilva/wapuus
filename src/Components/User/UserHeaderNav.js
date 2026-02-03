@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { UserContext } from "../../UserContext";
-import { ReactComponent as MyFeed } from "../../Assets/feed.svg";
-import { ReactComponent as MyStats } from "../../Assets/stats.svg";
-import { ReactComponent as AddImage } from "../../Assets/add.svg";
-import { ReactComponent as Exit } from "../../Assets/exit.svg";
+import MyFeed from "../../Assets/feed.svg?react";
+import MyStats from "../../Assets/stats.svg?react";
+import AddImage from "../../Assets/add.svg?react";
+import Exit from "../../Assets/exit.svg?react";
 import styles from "./UserHeaderNav.module.css";
 import useMedia from "../../Hooks/useMedia";
 
@@ -35,15 +35,25 @@ const UserHeaderNav = () => {
                     mobileMenu && styles.navMobileActive
                 }`}
             >
-                <NavLink to="/account" end activeClassName={styles.active}>
+                <NavLink
+                    to="/account"
+                    end
+                    className={({ isActive }) => (isActive ? styles.active : "")}
+                >
                     <MyFeed />
                     {mobile && "My Account"}
                 </NavLink>
-                <NavLink to="/account/stats" activeClassName={styles.active}>
+                <NavLink
+                    to="/account/stats"
+                    className={({ isActive }) => (isActive ? styles.active : "")}
+                >
                     <MyStats />
                     {mobile && "Stats"}
                 </NavLink>
-                <NavLink to="/account/post" activeClassName={styles.active}>
+                <NavLink
+                    to="/account/post"
+                    className={({ isActive }) => (isActive ? styles.active : "")}
+                >
                     <AddImage />
                     {mobile && "Post Wapuu"}
                 </NavLink>
