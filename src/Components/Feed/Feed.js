@@ -4,7 +4,7 @@ import FeedImages from "./FeedImages";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const Feed = ({ user }) => {
+const Feed = ({ user = 0 }) => {
     const [modalImage, setModalImage] = React.useState(null);
     const [pages, setPages] = React.useState([1]);
     const [infinite, setInfinite] = React.useState(true);
@@ -99,10 +99,6 @@ const Feed = ({ user }) => {
             )}
         </div>
     );
-};
-
-Feed.defaultProps = {
-    user: 0,
 };
 
 Feed.propTypes = {

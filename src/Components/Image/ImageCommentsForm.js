@@ -1,7 +1,6 @@
 import React from "react";
 import { COMMENT_POST } from "../../api";
-//import {ReactComponent as Send} from '../../Assets/enviar.svg'
-import { ReactComponent as Send } from "../../Assets/send.svg";
+import Send from "../../Assets/send.svg?react";
 import useFetch from "../../Hooks/useFetch";
 import Error from "../Helpers/Error";
 import styles from "./ImageCommentsForm.module.css";

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import { ReactComponent as Logo } from "../Assets/wapuu-footer-logo.svg";
+import Logo from "../Assets/wapuu-footer-logo.svg?react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {

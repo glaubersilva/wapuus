@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, Navigate } from "react-router";
+import { Route, Routes, Navigate } from "react-router-dom";
 import LoginCreate from "./LoginCreate";
 import LoginForm from "./LoginForm";
 import LoginPasswordLost from "./LoginPasswordLost";

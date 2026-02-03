@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
-import { ReactComponent as Logo } from "../Assets/wapuu-logo.svg";
+import Logo from "../Assets/wapuu-logo.svg?react";
 import { UserContext } from "../UserContext";
 
 const Header = () => {

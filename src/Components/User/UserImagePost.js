@@ -6,7 +6,7 @@ import Input from "../Forms/Input";
 import Button from "../Forms/Button";
 import Error from "../Helpers/Error";
 import { IMAGE_POST } from "../../api";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import Head from "../Helpers/Head";
 
 const UserImagePost = () => {
