@@ -5,6 +5,8 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
   error?: string | null;
   onBlur?: () => void;
+  setValue?: any;
+  validate?: () => boolean;
 }
 
 const Input = ({
@@ -16,6 +18,8 @@ const Input = ({
   value,
   onChange,
   className,
+  setValue,
+  validate,
   ...props
 }: InputProps) => {
   return (
