@@ -1,5 +1,11 @@
+.about {
+    padding-bottom: 1rem;
+}
+
 .about h2 {
     line-height: 2.7rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 .about a {
@@ -8,6 +14,7 @@
 
 .about p {
     line-height: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .about figure {

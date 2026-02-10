@@ -1,0 +1,59 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import useForm from "../../Hooks/useForm";
+import Button from "../Forms/Button";
+import Input from "../Forms/Input";
+import { UserContext } from "../../UserContext";
+import Error from "../Helpers/Error";
+import styles from "./LoginForm.module.css";
+import stylesBtn from "../Forms/Button.module.css";
+import Head from "../Helpers/Head";
+
+const LoginForm = () => {
+  const username = useForm(false);
+  const password = useForm(false);
+
+  const { userLogin, error, loading } = React.useContext(UserContext);
+
+  async function handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
+
+    if (username.validate() && password.validate()) {
+      userLogin(username.value, password.value);
+    }
+  }
+
+  return (
+    <section className="animeLeft">
+      <Head title="Login" description="" />
+      <h1 className="title">Login</h1>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <Input label="User" type="text" name="username" {...username} />
+        <Input
+          label="Password"
+          type="password"
+          name="password"
+          {...password}
+        />
+        {loading ? (
+          <Button disabled>Loading...</Button>
+        ) : (
+          <Button>Enter</Button>
+        )}
+        <Error error={error && "User or Password Invalid"} />
+      </form>
+      <Link className="link" to="/login/lost">
+        Lost the Password?
+      </Link>
+      <div className={styles.create}>
+        <h2 className={styles.subtitle}>Register</h2>
+        <p>Don't have an account yet? Register on the website.</p>
+        <Link className={stylesBtn.button} to="/login/create">
+          New User
+        </Link>
+      </div>
+    </section>
+  );
+};
+
+export default LoginForm;
